@@ -1,0 +1,1 @@
+import{d as s,j as t,O as a}from"./index-Cl3JiTIW.js";function n(){const o=s();return t.jsxs("div",{children:[t.jsx("div",{style:{paddingTop:"16px",marginBottom:"8px"},children:t.jsx("button",{className:"action-btn",style:{color:"var(--text-secondary)",fontSize:"14px"},onClick:()=>o(-1),children:"← Go Back"})}),t.jsx(a,{})]})}export{n as default};
