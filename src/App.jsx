@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound'
 import './App.css'
 
 // React.lazy: code-split non-critical pages (Lab 13)
-const SubredditPage = lazy(() => import('./pages/SubredditPage'))
+const SubredditPage = lazy(() => import('./pages/Subredditpage'))
 const PostPage = lazy(() => import('./pages/PostPage'))
 const PostLayout = lazy(() => import('./pages/PostLayout'))
 const SubmitPage = lazy(() => import('./pages/SubmitPage'))
