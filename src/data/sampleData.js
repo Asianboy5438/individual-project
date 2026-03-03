@@ -123,6 +123,7 @@ export const posts = [
     score: 89400,
     numComments: 4302,
     timeAgo: '3 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ITER_Tokamak_and_Plant_Systems_%282016%29_%2841783636452%29.jpg/1280px-ITER_Tokamak_and_Plant_Systems_%282016%29_%2841783636452%29.jpg',
   },
   {
     id: '3',
@@ -156,6 +157,7 @@ export const posts = [
     score: 67200,
     numComments: 1820,
     timeAgo: '8 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Pedestrian_on_a_footpath_%28Unsplash%29.jpg/1280px-Pedestrian_on_a_footpath_%28Unsplash%29.jpg',
   },
   {
     id: '6',
@@ -167,6 +169,7 @@ export const posts = [
     score: 91700,
     numComments: 2140,
     timeAgo: '1 day ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Runny_hunny.jpg/1280px-Runny_hunny.jpg',
   },
   {
     id: '7',
@@ -178,6 +181,7 @@ export const posts = [
     score: 248000,
     numComments: 4600,
     timeAgo: '5 hours ago',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1280px-Cat_November_2010-1a.jpg',
   },
   {
     id: '8',
