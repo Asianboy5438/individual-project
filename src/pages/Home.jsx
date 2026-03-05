@@ -15,23 +15,23 @@ export default function Home() {
   const [sort, setSort] = useState('hot')
   const [loading, setLoading] = useState(true)
 
-  // useSearchParams (Lab 10): reads query from URL
+  // Reads query from URL
   const [searchParams] = useSearchParams()
   const searchQuery = searchParams.get('search') || ''
 
-  // useEffect (Lab 8): simulates data loading (in real app: fetch from API)
+  // Simulates data loading (in real app: fetch from API)
   useEffect(() => {
     setLoading(true)
     const timer = setTimeout(() => setLoading(false), 400)
     return () => clearTimeout(timer) // cleanup — prevents memory leak
   }, [])
 
-  // useCallback (Lab 13): stable sort setter — prevents PostCard children re-renders
+  // Stable sort setter — prevents PostCard children re-renders
   const handleSort = useCallback((key) => {
     setSort(key)
   }, [])
 
-  // useMemo (Lab 13): only recalculates when sort or searchQuery changes
+  // Only recalculates when sort or searchQuery changes
   const filteredPosts = useMemo(() => {
     let result = [...posts]
 

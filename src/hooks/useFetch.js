@@ -11,7 +11,7 @@ export function useFetch(url) {
       return
     }
 
-    // AbortController: cancels fetch if component unmounts (best practice from slides)
+    // AbortController: cancels fetch if component unmounts
     const controller = new AbortController()
     setLoading(true)
     setError(null)
@@ -33,7 +33,7 @@ export function useFetch(url) {
 
     fetchData()
 
-    // Cleanup: abort on unmount (prevents memory leaks — per slides)
+    // Cleanup: abort on unmount (prevents memory leaks)
     return () => controller.abort()
   }, [url]) // re-runs only when url changes
 

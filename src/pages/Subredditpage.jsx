@@ -6,10 +6,10 @@ import PostCard from '../components/PostCard'
 import { subreddits, posts, formatNumber } from '../data/sampleData'
 
 export default function SubredditPage() {
-  // Dynamic route (Lab 10): extracts the :subreddit param from URL
+  // Dynamic route: extracts the :subreddit param from URL
   const { subreddit: subName } = useParams()
 
-  // Context API (Lab 11): joinedSubs shared with Sidebar — same data, no duplication
+  // Context API: joinedSubs shared with Sidebar — same data, no duplication
   const { joinedSubs, toggleJoin } = useAppContext()
 
   const bannerRef = useRef(null)
@@ -29,14 +29,14 @@ export default function SubredditPage() {
     rules: ['Be civil', 'Stay on topic'],
   }
 
-  // useFetch (Lab 14 / Lab 8): In a real app this would call an API
+  // useFetch : In a real app this would call an API
   // Here it simulates loading with our mock data
   const { loading } = useFetch(null) // null = no real URL; we use mock data below
 
   // Filter posts for this subreddit
   const subPosts = posts.filter(p => p.subreddit === subData.id)
 
-  // useLayoutEffect (Lab 12): measures banner DOM size before browser paints
+  // useLayoutEffect: measures banner DOM size before browser paints
   // Adjusts header overlap so avatar sits correctly
   useLayoutEffect(() => {
     if (bannerRef.current && headerRef.current) {

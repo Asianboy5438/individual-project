@@ -5,7 +5,7 @@ import Comment from '../components/Comment'
 import { posts, commentsByPost, subreddits, formatNumber } from '../data/sampleData'
 
 export default function PostPage() {
-  // Dynamic route (Lab 10): extracts :postId from URL
+  // Dynamic route: extracts :postId from URL
   const { postId } = useParams()
 
   const [loading, setLoading] = useState(true)
@@ -17,10 +17,10 @@ export default function PostPage() {
   const post = posts.find(p => p.id === postId)
   const subData = post ? subreddits.find(s => s.id === post.subreddit) : null
 
-  // useVote (Lab 14): reusable voting logic, same hook as PostCard
+  // useVote: reusable voting logic, same hook as PostCard
   const { score, voteState, vote } = useVote(post?.score || 0)
 
-  // useEffect (Lab 8): simulate fetching post + comments when postId changes
+  // useEffect: simulate fetching post + comments when postId changes
   useEffect(() => {
     setLoading(true)
     setLocalComments([])

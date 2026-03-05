@@ -6,7 +6,7 @@ export default function NotFound() {
       <h1>404</h1>
       <h2>Page Not Found</h2>
       <p>The page you're looking for doesn't exist or was removed.</p>
-      {/* Link (React Router): navigate home without reload */}
+      {/* Link: navigate home without reload */}
       <Link to="/" className="btn btn-fill" style={{ textDecoration: 'none', display: 'inline-block' }}>
         🏠 Go Home
       </Link>

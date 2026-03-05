@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { subreddits } from '../data/sampleData'
 
-// Sanitization helpers (from slides)
+// Sanitization helpers 
 const stripTags = (s) => String(s ?? '').replace(/<\/?[^>]+>/g, '')
 const trimCollapse = (s) => String(s ?? '').trim().replace(/\s+/g, ' ')
 
@@ -39,7 +39,7 @@ const validateAll = (values) => {
 }
 
 export default function SubmitPage() {
-  // Controlled form fields (Lab 7)
+  // Controlled form fields
   const [values, setValues] = useState(INITIAL_VALUES)
   const [errors, setErrors] = useState(INITIAL_ERRORS)
   const [submitting, setSubmitting] = useState(false)
@@ -57,14 +57,14 @@ export default function SubmitPage() {
     }
   }
 
-  // onBlur: validate field when user leaves it (Lab 7 pattern)
+  // onBlur: validate field when user leaves it
   const handleBlur = (e) => {
     const { name, value } = e.target
     const errorMsg = validateField(name, value)
     setErrors(prev => ({ ...prev, [name]: errorMsg }))
   }
 
-  // onSubmit: final gate — sanitize, validate all, submit (Lab 7)
+  // onSubmit: final gate — sanitize, validate all, submit
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -85,7 +85,7 @@ export default function SubmitPage() {
       return
     }
 
-    // Prevent double submission (Lab 7)
+    // Prevent double submission
     if (submitting) return
 
     try {
@@ -96,7 +96,7 @@ export default function SubmitPage() {
 
       setSuccessMessage('Post submitted successfully! Redirecting...')
 
-      // Clear form after submission (Lab 7)
+      // Clear form after submission 
       setValues(INITIAL_VALUES)
       setErrors(INITIAL_ERRORS)
 
@@ -104,7 +104,7 @@ export default function SubmitPage() {
       setTimeout(() => navigate('/', { replace: true }), 1500)
 
     } catch (err) {
-      // catch: server/network error (Lab 7)
+      // catch: server/network error
       setErrors(prev => ({ ...prev, general: 'Something went wrong. Please try again.' }))
     } finally {
       setSubmitting(false)

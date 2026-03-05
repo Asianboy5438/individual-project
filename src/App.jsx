@@ -43,7 +43,7 @@ export default function App() {
             {/* Submit form page */}
             <Route path="/submit" element={<SubmitPage />} />
 
-            {/* Lab 9: Catch-all for unknown routes */}
+            {/* Catch-all for unknown routes */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
